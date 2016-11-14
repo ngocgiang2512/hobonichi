@@ -254,6 +254,21 @@ jQuery(function () {
     }, 800);
     return false;
   });
+  
+  jQuery(".drawer .to-top-btn").click(function () {
+    jQuery("body,html").removeClass('noScroll');
+    jQuery("body,html").animate({
+      scrollTop: 0
+    }, 800);
+    return false;
+  });
+  jQuery(".drawer .to-bookref").click(function () {
+    jQuery("body,html").removeClass('noScroll');
+    jQuery("body,html").animate({
+      scrollTop: jQuery(".book-ref-wrapper").offset().top
+    }, 800);
+    return false;
+  });
 });
 
 // smooth scroll
@@ -354,7 +369,7 @@ jQuery(function($){
     hideMobileMenu(function(){
       setTimeout(function(){
         $('html, body').animate({
-          scrollTop: target.offset().top - 53
+          scrollTop: target.offset().top - 73
         }, 800);
         return false;
       }, 150);
