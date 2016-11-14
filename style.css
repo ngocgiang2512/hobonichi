@@ -5546,7 +5546,7 @@ header .to-home:before {
 .menu-content .title {
   line-height: 50px;
   font-weight: 700;
-  padding-left: 20px;
+  padding-left: 10px;
   border-bottom: 1px solid #dbdbdb;
 }
 
@@ -5559,8 +5559,9 @@ header .to-home:before {
   margin: 0px;
 }
 .menu-content .to-recipe,
-.menu-content .to-step {
-  padding-left: 20px;
+.menu-content .to-step,
+.menu-content .to-bookref {
+  padding-left: 10px;
   color: #cc9629;
   line-height: 44px;
   border-bottom: 1px solid #dbdbdb;
@@ -5570,7 +5571,7 @@ header .to-home:before {
 
 .menu-content .to-top-btn {
   cursor: pointer;
-  padding-left: 20px;
+  padding-left: 10px;
   color: #cc9629;
   line-height: 40px;
   font-weight: 700;
@@ -5640,20 +5641,21 @@ header .to-home:before {
 .side-menu-content .menu-content .steps-wrapper .step-title{
   display: block;
   line-height: 25px;
-  padding: 10px 0 10px 15px;
+  padding: 10px 0 10px 25px;
   border-bottom: 1px solid #e5e5e5;
-  color: #cc9629;
+  color: #333;
   font-weight: 700;
   box-shadow: none;
 }
-
 .menu-content .steps-wrapper .step-title:last-child {
   border-bottom: none;
 }
 
 .side-menu-content .menu-content .steps-wrapper .step-title span,
 .drawer .menu-content .steps-wrapper .step-title a span  {
-  margin-right: 20px;
+  position: absolute;
+  top: 10px;
+  left: 2px;
 }
 
 /*.scroll-wrapper {
@@ -5715,6 +5717,7 @@ header .to-home:before {
   top: 0;
   left: 0;
   padding-top: 73px;
+  padding-bottom: 44px;
 }
 .drawer .menu-content.show .scroll-wrapper > ul {
   list-style: none;
