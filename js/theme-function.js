@@ -256,16 +256,18 @@ jQuery(function () {
   });
   
   jQuery(".drawer .to-top-btn").click(function () {
-    jQuery("body,html").removeClass('noScroll');
+    jQuery("body,html").removeClass('open');
+    jQuery("body,html").addClass('close');
     jQuery("body,html").animate({
       scrollTop: 0
     }, 800);
     return false;
   });
   jQuery(".drawer .to-bookref").click(function () {
-    jQuery("body,html").removeClass('noScroll');
+    jQuery("body,html").removeClass('open');
+    jQuery("body,html").addClass('close');
     jQuery("body,html").animate({
-      scrollTop: jQuery(".book-ref-wrapper").offset().top
+      scrollTop: jQuery(".book-ref-wrapper").offset().top - 80
     }, 800);
     return false;
   });
@@ -313,10 +315,11 @@ jQuery(function($){
     recipe.removeClass('show');
     step.toggleClass('show');    
     if(!menu.hasClass('show')) {
-      entry.removeClass('entry-content_active');
-      $('html,body').removeClass('noScroll');
+      $('html,body').removeClass('open');
+      $('html,body').addClass('close');
     } else {
-      $('html,body').addClass('noScroll');
+      $('html,body').removeClass('close');
+      $('html,body').addClass('open');
     }
   });
 
@@ -324,10 +327,11 @@ jQuery(function($){
     recipe.removeClass('show');
     step.toggleClass('show');    
     if(!menu.hasClass('show')) {
-      entry.removeClass('entry-content_active');
-      $('html,body').removeClass('noScroll');
+      $('html,body').removeClass('open');
+      $('html,body').addClass('close');
     } else {
-      $('html,body').addClass('noScroll');
+      $('html,body').removeClass('close');
+      $('html,body').addClass('open');
     }
   });
 
@@ -336,10 +340,11 @@ jQuery(function($){
     step.removeClass('show');
     recipe.toggleClass('show');
     if(!menu.hasClass('show')) {
-      entry.removeClass('entry-content_active');
-      $('html,body').removeClass('noScroll');
+      $('html,body').removeClass('open');
+      $('html,body').addClass('close');
     } else {
-      $('html,body').addClass('noScroll');
+      $('html,body').removeClass('close');
+      $('html,body').addClass('open');
     }
   });
 
@@ -347,24 +352,26 @@ jQuery(function($){
     step.removeClass('show');
     recipe.toggleClass('show');
     if(!menu.hasClass('show')) {
-      entry.removeClass('entry-content_active');
-      $('html,body').removeClass('noScroll');
+      $('html,body').removeClass('open');
+      $('html,body').addClass('close');
     } else {
-      $('html,body').addClass('noScroll');
+      $('html,body').removeClass('close');
+      $('html,body').addClass('open');
     }
   });
 
   // click on close icon
   $('.drawer .close-icon').on('click', function(){
     jQuery('.drawer .menu-content').removeClass('show');
-    entry.removeClass('entry-content_active');
-    $('html,body').removeClass('noScroll');
+    $('html,body').removeClass('open');
+    $('html,body').addClass('close');
   });
 
   // hide the menu when click on step title
   $(".drawer .step-title a").click(function(){
     var target = $(this.hash);
-
+    $('html,body').removeClass('open');
+    $('html,body').addClass('close');
     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
     hideMobileMenu(function(){
       setTimeout(function(){

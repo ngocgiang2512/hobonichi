@@ -5580,7 +5580,9 @@ header .to-home:before {
 .menu-content .book-material-content {
   border-bottom: 1px solid #dbdbdb;
 }
-
+.drawer .menu-content .book-material-content  {
+  border-bottom: 0px;
+}
 .menu-content .book-material-content ul {
   margin-bottom: 0;
 }
@@ -5670,30 +5672,47 @@ header .to-home:before {
   background: #fff;
   z-index: 99;
   overflow: hidden;
-  -webkit-transform: translate(-9999px, 0);
-  -moz-transform: translate(-9999px, 0);
-  -o-transform: translate(-9999px, 0);
-  -ms-transform: translate(-9999px, 0);
-  transform: translate(-9999px, 0);
+  -webkit-transition: -webkit-transform .3s ;
+  -moz-transition: -moz-transform .3s ;
+  -ms-transition: -ms-transform .3s ;
+  -o-transition: -o-transform .3s ;
+  transition: transform .3s ;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
 }
-.noScroll .drawer {
+.open .drawer {
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
   -o-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
 }
+.close .drawer {
+  -webkit-transition: -webkit-transform .3s ;
+  -moz-transition: -moz-transform .3s ;
+  -ms-transition: -ms-transform .3s ;
+  -o-transition: -o-transform .3s ;
+  transition: transform .3s ;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
 .drawer .menu-content {
-  -webkit-transition: -webkit-transform .3s ease;
-  -moz-transition: -moz-transform .3s ease;
-  -ms-transition: -ms-transform .3s ease;
-  -o-transition: -o-transform .3s ease;
-  transition: transform .3s ease;
-  -webkit-transform: translateX(999px);
-  -moz-transform: translateX(999px);
-  -o-transform: translateX(999px);
-  -ms-transform: translateX(999px);
-  transform: translateX(999px);
+  -webkit-transition: -webkit-transform .3s ;
+  -moz-transition: -moz-transform .3s ;
+  -ms-transition: -ms-transform .3s ;
+  -o-transition: -o-transform .3s ;
+  transition: transform .3s ;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
   position: absolute;
   top: 0px;
   width: 100%;
@@ -5711,6 +5730,9 @@ header .to-home:before {
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
+.drawer .menu-content .steps-wrapper {
+  border-bottom: 0px;
+}
 .drawer .menu-content .scroll-wrapper {  
   position: absolute;
   width: 100%;
@@ -5722,6 +5744,9 @@ header .to-home:before {
 .drawer .menu-content.show .scroll-wrapper > ul {
   list-style: none;
   margin: 0;
+}
+.drawer .menu-content .scroll-wrapper > ul {
+  list-style: none;
 }
 .drawer .menu-content.show .scroll-wrapper > ul > li {
   position: relative;
@@ -6145,7 +6170,7 @@ header .to-home:before {
     border: 1px solid #cc9629;
     box-shadow: none !important;
     position: fixed;
-    bottom: 10px;
+    bottom: 30px;
     right: 5px; 
     opacity: 0.8;
   }
@@ -6159,7 +6184,7 @@ header .to-home:before {
     border: 1px solid #cc9629; 
     box-shadow: none !important;
     position: fixed;
-    bottom: 10px;
+    bottom: 30px;
     right: 50%;
     opacity: 0.8;
     transform: translateX(50%);
