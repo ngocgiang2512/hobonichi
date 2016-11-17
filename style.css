@@ -44,7 +44,7 @@ Version: 1.0.0
 @font-face {
   font-family: 'YuMinchor';
   src: url("fonts/YuMincho-Regular.eot") format("embedded-opentype");
-  src: url("fonts/YuMincho-Regular.ttf") format("truetype"), url("fonts/YuMincho-Regular.svg#YuMincho-Regular") format("svg");
+  src: url("fonts/YuMincho-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -52,7 +52,7 @@ Version: 1.0.0
 @font-face {
   font-family: 'YuMincho';
   src: url("fonts/YuMincho-Demibold.eot") format("embedded-opentype");
-  src: url("fonts/YuMincho-Demibold.ttf") format("truetype"), url("fonts/YuMincho-Demibold.svg#YuMincho-Demibold") format("svg");
+  src: url("fonts/YuMincho-Demibold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -60,7 +60,7 @@ Version: 1.0.0
 @font-face {
   font-family: 'Helvetica';
   src: url("fonts/HelveticaLTStd-Roman.eot");
-  src: local("☺"), url("fonts/HelveticaLTStd-Roman.woff") format("woff"), url("fonts/HelveticaLTStd-Roman.ttf") format("truetype"), url("fonts/HelveticaLTStd-Roman.svg") format("svg");
+  src: local("☺"), url("fonts/HelveticaLTStd-Roman.woff") format("woff"), url("fonts/HelveticaLTStd-Roman.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
