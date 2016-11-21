@@ -66,7 +66,7 @@
                       </li>
                   <?php endwhile; ?>
                   <li><p class="to-step">材料</p></li>
-                  <li><p class="to-bookref">ブック</p></li>
+                  <li><p class="to-bookref">書籍について</p></li>
                   <li><p class="to-top-btn">LIFE RECIPE の トップヘ</p></li>
               </ul>
           </div>
@@ -107,7 +107,7 @@
                   <?php endwhile;
               endif; ?>
                 <li><p class="to-recipe">つくりかた</p></li>
-                <li><p class="to-bookref">ブック</p></li>
+                <li><p class="to-bookref">書籍について</p></li>
                 <li><p class="to-top-btn">LIFE RECIPE の トップヘ</p></li>
               </ul>
             </div>
