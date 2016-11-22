@@ -5515,7 +5515,7 @@ header .to-home:before {
   display: none;
 }
 .header-recipe-icon {
-  right: 80px;
+  right: 105px;
 }
 
 .header-step-icon {
@@ -5739,7 +5739,6 @@ header .to-home:before {
   top: 0;
   left: 0;
   padding-top: 73px;
-  padding-bottom: 44px;
 }
 .drawer .menu-content.show .scroll-wrapper > ul {
   list-style: none;
@@ -5864,49 +5863,34 @@ header .to-home:before {
     width: 50px;  
     height: 50px;
   }
-  header .go-back img {
-    height: 25px;
-  }
   header .go-back span {
     color: #fff;
     font-size: 12px;
     display: block;
-    margin-top: 10px;
+    margin-top: 4px;
     font-family: "ヒラギノ角ゴ Pro W6","HiraKakuPro-W6","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
   }
   .header-recipe-icon,
   .header-step-icon {
     display: block;
     width: 50px;
-    height: 50px;
-    border-radius: 5px;
   }
   .border-dashed {
     display: block;
     position: absolute;
     width: 2px;
-    height: 50px;
-    /*border: 1px dashed #fff;*/
-    background: url('images/icons/border-dash.png') repeat-y center center;
-    top: 0px;
-    right: 68px;
+    height: 57px;
+    background: url(images/icons/border-dash.png) repeat-y center center;
+    top: 5px;
+    right: 80px;
   }
   .header-recipe-icon span,
   .header-step-icon span {
     color: #fff;
     font-size: 12px;
     display: block;
-    margin-top: 10px;
+    margin-top: 4px;
     font-family: "ヒラギノ角ゴ Pro W6","HiraKakuPro-W6","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
-  }
-  .header-step-icon span {
-    margin-top: 12px;
-  }
-  .header-recipe-icon img {
-    width: 70%;
-  }
-  .header-step-icon img {
-    height: 50%;
   }
   .single .site-header {
     position: fixed;
@@ -6044,31 +6028,31 @@ header .to-home:before {
     margin-left: 10px;
   }
   header .go-back {
-    top: 18px;
+    top: 11px;
     left: 10px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   header .go-back img {
-    height: 20px;
+    height: 30px;
   }
   header .go-back span {
     margin-top: 7px;
   }
   .header-recipe-icon,
   .header-step-icon {
-    top: 14px;
+    top: 10px;
     width: 50px;
     height: 50px;
   }
   .header-recipe-icon img,
   .header-step-icon img {
-    height: 25px;
+    height: 30px;
     vertical-align: top;
   }
   .border-dashed {
-    height: 48px;
-    top: 9px;
+    height: 55px;
+    top: 10px;
     right: 70px;
   }
   .header-recipe-icon span, 
