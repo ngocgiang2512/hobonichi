@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
         var now = +new Date();
         var diffTime = now - startTime;
 
-        if (diffTime < 500 && absY < 200) {
+        if (diffTime < 500 && absY < 150) {
           if (diffY > 0) {
             movePrev();
           } else if (diffY < 0) {
@@ -57,13 +57,18 @@ jQuery(document).ready(function($) {
       });
     });
 
+    // $(window).scrollTop(): distance from vertical scrollbar to window, it changes when scroll
+    // $('.step-wrapper').offset().top: top coordinate of element, fixed value to each step-wrapper
+    // distance = (elementOffset - scrollTop): distance from step-wrapper to top of screen, it's maybe negative or positive
+    // currentStepOffset: step-wrapper has minimum positive top offset
+
     function movePrev() {
       var currentStepHeight;
       var stepWrapper = jQuery('.step-wrapper');
       stepWrapper.removeClass('currentStep');
 
       var currentStepOffset = 9999,
-          scrollTop = $(window).scrollTop();
+          scrollTop = $(window).scrollTop();      
 
       stepWrapper.each(function(){
         var elementOffset = jQuery(this).offset().top,
@@ -88,14 +93,14 @@ jQuery(document).ready(function($) {
 
       stepWrapper.each(function(){
         var elementOffset = jQuery(this).offset().top,
-            distance = (elementOffset - scrollTop);
+            distance = (elementOffset - scrollTop) + 150; // touch distance
             currentStepOffset = (distance > 0 && distance < currentStepOffset) ? distance : currentStepOffset;   
         if(currentStepOffset == distance) {
           jQuery(this).addClass('currentStep');
           return false;
         }               
       });
-
+      
       jQuery('.currentStep').find('.next-step-btn').click();
     }
 
